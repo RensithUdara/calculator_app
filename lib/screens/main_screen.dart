@@ -124,12 +124,6 @@ class Calculator extends StatelessWidget {
                               : FontWeight.normal),
                       child: Text(
                         calculator.output,
-                        // style: TextStyle(
-                        //     fontSize: calculator.equalPressed ? 35 : 25,
-                        //     color: Appcolors.acColor,
-                        //     fontWeight: calculator.equalPressed
-                        //         ? FontWeight.bold
-                        //         : FontWeight.normal),
                       ),
                     ),
                   ],
@@ -162,7 +156,7 @@ class Calculator extends StatelessWidget {
                   children: [
                     SizedBox(
                       height: 62,
-                      width: 70,
+                      width: 80,
                       child: ElevatedButton(
                         onPressed: () {
                           calculator.setValue("AC");
@@ -186,7 +180,7 @@ class Calculator extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 62,
-                      width: 70,
+                      width: 80,
                       child: ElevatedButton(
                         onPressed: () {
                           calculator.setValue("<");
@@ -215,7 +209,7 @@ class Calculator extends StatelessWidget {
                             ? Appcolors.darkmodeColor
                             : Appcolors.opButtonColor,
                         height: 62,
-                        width: 70),
+                        width: 80),
                     customButton(
                         text: "*",
                         fgColor: Appcolors.textColor,
@@ -224,7 +218,7 @@ class Calculator extends StatelessWidget {
                             ? Appcolors.darkmodeColor
                             : Appcolors.opButtonColor,
                         height: 62,
-                        width: 70),
+                        width: 80),
                   ],
                 ),
                 const SizedBox(
@@ -241,7 +235,7 @@ class Calculator extends StatelessWidget {
                             ? const Color(0xff303136)
                             : Appcolors.whiteColor,
                         height: 62,
-                        width: 70),
+                        width: 80),
                     customButton(
                         text: "8",
                         fgColor: Appcolors.textColor,
@@ -250,7 +244,7 @@ class Calculator extends StatelessWidget {
                             ? const Color(0xff303136)
                             : Appcolors.whiteColor,
                         height: 62,
-                        width: 70),
+                        width: 80),
                     customButton(
                         text: "9",
                         fgColor: Appcolors.textColor,
@@ -259,7 +253,7 @@ class Calculator extends StatelessWidget {
                             ? const Color(0xff303136)
                             : Appcolors.whiteColor,
                         height: 62,
-                        width: 70),
+                        width: 80),
                     customButton(
                         text: "-",
                         fgColor: Appcolors.textColor,
@@ -268,7 +262,7 @@ class Calculator extends StatelessWidget {
                             ? Appcolors.darkmodeColor
                             : Appcolors.opButtonColor,
                         height: 62,
-                        width: 70),
+                        width: 80),
                   ],
                 ),
                 const SizedBox(
@@ -291,7 +285,7 @@ class Calculator extends StatelessWidget {
                                     ? const Color(0xff303136)
                                     : Appcolors.whiteColor,
                                 height: 62,
-                                width: 70,
+                                width: 80,
                               ),
                               customButton(
                                   text: "5",
@@ -301,7 +295,7 @@ class Calculator extends StatelessWidget {
                                       ? const Color(0xff303136)
                                       : Appcolors.whiteColor,
                                   height: 62,
-                                  width: 70),
+                                  width: 80),
                               customButton(
                                   text: "6",
                                   fgColor: Appcolors.textColor,
@@ -310,7 +304,7 @@ class Calculator extends StatelessWidget {
                                       ? const Color(0xff303136)
                                       : Appcolors.whiteColor,
                                   height: 62,
-                                  width: 70),
+                                  width: 80),
                             ],
                           ),
                           const SizedBox(
@@ -328,7 +322,7 @@ class Calculator extends StatelessWidget {
                                     ? const Color(0xff303136)
                                     : Appcolors.whiteColor,
                                 height: 62,
-                                width: 70,
+                                width: 80,
                               ),
                               customButton(
                                   text: "2",
@@ -338,7 +332,7 @@ class Calculator extends StatelessWidget {
                                       ? const Color(0xff303136)
                                       : Appcolors.whiteColor,
                                   height: 62,
-                                  width: 70),
+                                  width: 80),
                               customButton(
                                   text: "3",
                                   fgColor: Appcolors.textColor,
@@ -347,7 +341,7 @@ class Calculator extends StatelessWidget {
                                       ? const Color(0xff303136)
                                       : Appcolors.whiteColor,
                                   height: 62,
-                                  width: 70),
+                                  width: 80),
                             ],
                           ),
                           const SizedBox(
@@ -364,7 +358,7 @@ class Calculator extends StatelessWidget {
                                       ? const Color(0xff303136)
                                       : Appcolors.whiteColor,
                                   height: 65,
-                                  width: 150),
+                                  width: 180),
                               customButton(
                                   text: ".",
                                   fgColor: Appcolors.textColor,
@@ -373,7 +367,7 @@ class Calculator extends StatelessWidget {
                                       ? const Color(0xff303136)
                                       : Appcolors.whiteColor,
                                   height: 65,
-                                  width: 70),
+                                  width: 80),
                             ],
                           ),
                         ],
@@ -392,7 +386,7 @@ class Calculator extends StatelessWidget {
                                 ? Appcolors.darkmodeColor
                                 : Appcolors.opButtonColor,
                             height: 110,
-                            width: 70),
+                            width: 80),
                         const SizedBox(
                           height: 10,
                         ),
@@ -404,7 +398,7 @@ class Calculator extends StatelessWidget {
                                 ? Appcolors.darkmodeColor
                                 : Appcolors.opButtonColor,
                             height: 110,
-                            width: 70),
+                            width: 80),
                       ],
                     ),
                   ],
@@ -431,7 +425,7 @@ class scientificButton extends StatelessWidget {
 
     return SizedBox(
       width: 70,
-      height: 40,
+      height: 50,
       child: ElevatedButton(
         onPressed: () {
           calculator.setValue(text);
@@ -476,35 +470,34 @@ class customButton extends StatelessWidget {
     return SizedBox(
       height: height,
       width: width,
-child: ElevatedButton(
-  onPressed: () {
-    print(text);
-    if (text != "=") {
-      calculator.updateText(text);
-    } else {
-      calculator.setValue(text);
-    }
-  },
-  style: ElevatedButton.styleFrom(
-          backgroundColor: bgColor,
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(15))))
-      .copyWith(
-    backgroundColor: MaterialStateProperty.resolveWith<Color>(
-      (Set<MaterialState> states) {
-        if (states.contains(MaterialState.pressed)) {
-          return const Color(0xffa0d7fe); // Color when pressed
-        }
-        return bgColor; // Default color
-      },
-    ),
-  ),
-  child: Text(
-    "$text",
-    style: TextStyle(fontSize: 30, color: fgColor),
-  ),
-),
-
+      child: ElevatedButton(
+        onPressed: () {
+          print(text);
+          if (text != "=") {
+            calculator.updateText(text);
+          } else {
+            calculator.setValue(text);
+          }
+        },
+        style: ElevatedButton.styleFrom(
+                backgroundColor: bgColor,
+                shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(15))))
+            .copyWith(
+          backgroundColor: MaterialStateProperty.resolveWith<Color>(
+            (Set<MaterialState> states) {
+              if (states.contains(MaterialState.pressed)) {
+                return const Color(0xffa0d7fe); // Color when pressed
+              }
+              return bgColor; // Default color
+            },
+          ),
+        ),
+        child: Text(
+          text,
+          style: TextStyle(fontSize: 30, color: fgColor),
+        ),
+      ),
     );
   }
 }
